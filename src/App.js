@@ -101,7 +101,7 @@ function App() {
         {students.map((item) => (
           <div key={item._id} className="d-flex justify-content-between align-items-center border rounded-3 p-3 bg-light">
             <span className="text-dark">{item.name}</span>
-          <button className='btn btn-warning' onClick={()=>handleView(item)}>click</button>
+          <button className='btn btn-warning' onClick={()=>handleView(item)}>Veiw</button>
           </div>
         ))}
       </div>
