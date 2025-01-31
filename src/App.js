@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Toaster, toast } from 'react-hot-toast';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -73,6 +73,11 @@ function App() {
     }
   };
 
+    // const [data,setData] = useState()
+// function handleClick(id){
+//   console.log("id is", id)
+// }
+
   const handleView = (student) => {
     setSelectedStudent(student); // Set the selected student
     setValue("name", student.name);  // Set values to the form fields
@@ -90,13 +95,13 @@ function App() {
         Add Student
       </button>
 
-      {loading && <div className="text-center"><strong></strong></div>}
+      {loading && <div className="text-center"><strong>loading...</strong></div>}
 
       <div className="d-flex flex-column gap-1">
         {students.map((item) => (
           <div key={item._id} className="d-flex justify-content-between align-items-center border rounded-3 p-3 bg-light">
             <span className="text-dark">{item.name}</span>
-            <button className="btn btn-success" onClick={() => handleView(item)}>View</button>
+          <button className='btn btn-warning' onClick={()=>handleView(item)}>click</button>
           </div>
         ))}
       </div>
