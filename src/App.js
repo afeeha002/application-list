@@ -90,7 +90,7 @@ function App() {
         Add Student
       </button>
 
-      {loading && <div className="text-center"><strong>Loading...</strong></div>}
+      {loading && <div className="text-center"><strong></strong></div>}
 
       <div className="d-flex flex-column gap-1">
         {students.map((item) => (
